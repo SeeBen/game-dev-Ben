@@ -1,0 +1,77 @@
+<h2 align-center> t1a05-Javascript by Ben </h2>
+
+
+
+Enter your number : <input id="myText01" type=number value=Seeley>
+<input type=button value="square" onclick="{
+
+// alert(document.getElementById('myText01').value)
+
+// alert(document.all.myText01.value)
+
+
+
+document.getElementById('myDiv01').innerHTML = (document.getElementById('myText01').value)
+document.getElementById('myDiv01').style.color= 'red'
+document.getElementById('myDiv01').innerHTML = (document.getElementById('myText01').value) * (document.getElementById('myText01').value)
+ 
+
+}">
+<input type=button value="print as is" onclick="{
+
+// alert(document.getElementById('myText01').value)
+
+// alert(document.all.myText01.value)
+
+
+
+document.getElementById('myDiv01').innerHTML = (document.getElementById('myText01').value)
+document.getElementById('myDiv01').style.color= 'green'
+
+}">
+
+<div id="myDiv01" style="font-size:40px;"> Your Number </div>
+
+
+
+How are you feeling? : <input id="myText02" type=text value=>
+<input type=button value="butan" onclick="{
+
+x=document.getElementById('myText02').value
+if (x=='') {alert('enter a feeling')}
+else{
+
+document.getElementById('myDiv02').innerHTML =
+'So you are feeling ' + (document.getElementById('myText02').value) + '?'
+
+}
+
+
+}">
+<div id="myDiv02" style="font-size:40px;"> Emotion </div>
+<br>
+
+
+<h2 align=center>t1a05-if-test</h2>
+enter a number:
+<input id="myText04" type=number value=0><br>
+<div id="myDiv04" style="font-size:40px; color:red;"></div><br>
+<input type=button value="First" onClick="{
+myNumber=document.getElementById('myText04').value
+document.getElementById('myDiv04').innerHTML=''
+if(myNumber ==5 ) {document.getElementById('myDiv04').innerHTML += 'you entered a 5<br>'}
+if((myNumber ==10)||(myNumber ==110)||(myNumber ==-10)) {document.getElementById('myDiv04').innerHTML += 'I like 10s aswell<br>'}
+if(myNumber <= 10) {document.getElementById('myDiv04').innerHTML+= 'Less than or 10 <br>'}
+if (myNumber > 10 ) {document.getElementById('myDiv04').innerHTML+= 'Greater than 10 <br>'}
+if(myNumber < 0) {document.getElementById('myDiv04').innerHTML+= 'Don\'t be so negative <br>'}
+if(myNumber ==0) {document.getElementById('myDiv04').innerHTML+= 'Really a 0? How original <br>'}
+
+}">
+Try the numbers 5, 10 , 11, 0 ,-1, -10, 110
+
+
+
+
+
+
+

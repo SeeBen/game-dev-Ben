@@ -1,0 +1,59 @@
+<h2 align-center> t1a07-08-objects by Ben </h2>
+<script>
+
+function myStudent(myAge, myName, myImage){
+this.myStudentAge = myAge
+this.myStudentName = myName
+this.myStudentImage = myImage
+this.myShowInfo = function(){
+ document.getElementById('myDiv1').innerHTML += 'my name is ' + this.myStudentName + ' <br> '
+ };
+ 
+ }
+ </script>
+ 
+ <input type=button value="Set Ben" onclick="{
+ myBen = new myStudent(20, 'Ben', 'http')
+ }">
+ 
+ <input type=button value="Show Ben" onclick="{
+ myBen.myShowInfo()
+ }">
+ 
+ <input type=button value="Set and Show Mary" onclick="{
+ myMary = new myStudent(18, 'Mary', 'http')
+ myMary.myShowInfo()
+ }">
+ <div id='myDiv1'>...<br></div>
+ <br> <br> <br> <br>
+ 
+ <script>
+ function myOb(x){
+ this.myX= x*5;
+ this.myFun=function(){
+ document.getElementById('myDiv').innerHTML=
+ 'The Property <b>this.myX</b>= '+this.myX+', but the passed variable <b>x</b>='+x
+     }
+	 }
+	 </script>
+	 
+	 <input type=button value=click onclick="{
+	 myObject=new myOb(4)
+	 myObject.myFun()
+	 }">
+	 <input type=button value=click onclick="{
+	 myObject=new myOc(3)
+	 myObject.myFum()
+	 }">
+	 <div id="myDiv">...</div>
+	 
+	  <script>
+ function myOc(y){
+ this.myY= y*5;
+ this.myFum=function(){
+ document.getElementById('myDiv').innerHTML=
+ 'The Property <b>this.myY</b>= '+this.myY+', but the passed variable <b>y</b>='+y
+     }
+	 }
+	 </script>
+	

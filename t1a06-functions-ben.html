@@ -1,0 +1,31 @@
+<h2 align-center> t1a06-functions by Ben </h2>
+
+<script>
+function myCuberBetter(x){
+return x*x*x
+}
+</script>
+
+<input id="myName01" type=number value="">
+
+<div id="myDiv01">Number Cubed</div>
+
+<input type=button value=cube onclick="{
+document.getElementById('myDiv01').innerHTML=
+myCuberBetter(document.getElementById('myName01').value);
+}"> <br> <br>
+
+<script>
+function myCuberBetter(y){
+return y*y
+}
+</script>
+
+<input id="myName02" type=number value="">
+
+<div id="myDiv02">Number Squared</div>
+
+<input type=button value=square onclick="{
+document.getElementById('myDiv02').innerHTML=
+myCuberBetter(document.getElementById('myName02').value);
+}"> <br>
