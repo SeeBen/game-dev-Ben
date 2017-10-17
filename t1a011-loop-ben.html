@@ -1,0 +1,30 @@
+<h2 align=center>Array loops by Ben</h2>
+
+<input id="mytext01" value=>
+
+<input type=button value="for loop" onClick="{
+x=document.getElementById('mytext01').value
+ 
+ for (myLoop=1;myLoop<=x;myLoop++){
+   document.getElementById('myDiv01').innerHTML+=myLoop+'<br>'
+  
+  }
+}"><br>
+
+
+<input type=button value="make Array" onClick="{
+  myArray=new Array()
+  for(myLoop=1;myLoop<=5;myLoop++){
+    myArray[myLoop]=Math.round(Math.random()*10)
+ }
+}"><br>
+
+<input type=button value="Show Array" onClick="{
+  for(myLoop=1;myLoop<=5;myLoop++){
+     document.getElementById('myDiv01').innerHTML += myArray[myLoop]+'<br>'
+}
+
+
+ }"><br> 
+ 
+<div id="myDiv01">...</div>
