@@ -1,5 +1,8 @@
 <h2 align-center> t1a06-functions by Ben </h2>
 
+<h1 align=center style="color:white">
+Incredible Code Calculator </h1>
+
 <script>
 function myCuberBetter(x){
 return x*x*x
@@ -10,22 +13,28 @@ return x*x*x
 
 <div id="myDiv01">Number Cubed</div>
 
-<input type=button value=cube onclick="{
+<input type=button value="Cubed" onclick="{
 document.getElementById('myDiv01').innerHTML=
-myCuberBetter(document.getElementById('myName01').value);
+myCuberBetter(document.getElementById('myName01').value);
 }"> <br> <br>
 
 <script>
-function myCuberBetter(y){
+function myCuberBetter02(y){
 return y*y
 }
 </script>
 
 <input id="myName02" type=number value="">
-
 <div id="myDiv02">Number Squared</div>
 
 <input type=button value=square onclick="{
 document.getElementById('myDiv02').innerHTML=
-myCuberBetter(document.getElementById('myName02').value);
+myCuberBetter02(document.getElementById('myName02').value);
 }"> <br>
+
+<style>
+body {
+        background-image: url("https://images.designtrends.com/wp-content/uploads/2015/11/04171302/Green-Chalkboard-Texture.jpg");
+} 
+ 
+</style>
