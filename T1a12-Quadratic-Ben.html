@@ -68,16 +68,13 @@ We could just try to solve the equation<br>
 Write a program to solve the quadratic equation for y given x and <br>
 y=ax<sup>2</sup> + bx + c using any coefficients (should output "Can't be solved" on any errors)<br>
 <br>
-x = <input type=text id="myX" value="2" size=3><br>
-y = <input type=text id="myY1" value="3" size=3>x<sup>2</sup> + <input type=text id="myY2" value="4" size=3>x+<input type=text value="5" id="myY3" size=3><br><br>
+x = <input type=text id="myX" value="4" size=3><br>
+y = <input type=text id="myY1" value="3" size=3>x<sup>2</sup> + <input type=text id="myY2" value="2" size=3>x+<input type=text value="1" id="myY3" size=3><br><br>
 <input type=button value="Solve" onclick="{
 
 document.getElementById('myDiv01').innerHTML = 
-document.getElementById('myY1').value *
-document.getElementById('myX').value *
- document.getElementById('myX').value + 
-document.getElementById('myY2').value *
- document.getElementById('myX').value +
+document.getElementById('myY1').value * document.getElementById('myX').value * document.getElementById('myX').value + 
+document.getElementById('myY2').value * document.getElementById('myX').value +
 document.getElementById('myY3').value * 1
 
 
