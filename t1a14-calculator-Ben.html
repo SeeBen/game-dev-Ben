@@ -1,0 +1,154 @@
+<head>
+<title> T1a14-calculator-Ben </title>
+</head>
+<h2 align-center> t1a14-calculator-Ben </h2> <br>
+
+<input id="myText01"  type=text value="12"  > 
+<input id="myText02"  type=text value=""  > 
+<input id="myText03"  type=text value="3"  > <br>
+
+<input type=button value="1" id="myNumb1" onClick="{
+if(document.getElementById('myText02').value == ''){
+document.getElementById('myText01').value += 1*1}
+else{
+document.getElementById('myText03').value += 1*1
+}
+}">
+<input type=button value="2" id="myNumb2" onClick="{
+if(document.getElementById('myText02').value == ''){
+document.getElementById('myText01').value += 2*1}
+else{
+document.getElementById('myText03').value += 2*1
+}
+}">
+<input type=button value="3" id="myNumb3" onClick="{
+if(document.getElementById('myText02').value == ''){
+document.getElementById('myText01').value += 3*1}
+else{
+document.getElementById('myText03').value += 3*1
+}
+}">
+<br>
+<input type=button value="4" id="myNumb4" onClick="{
+if(document.getElementById('myText02').value == ''){
+document.getElementById('myText01').value += 4*1}
+else{
+document.getElementById('myText03').value += 4*1
+}
+}">
+<input type=button value="5" id="myNumb5" onClick="{
+if(document.getElementById('myText02').value == ''){
+document.getElementById('myText01').value += 5*1}
+else{
+document.getElementById('myText03').value += 5*1
+}
+}">
+<input type=button value="6" id="myNumb6" onClick="{
+if(document.getElementById('myText02').value == ''){
+document.getElementById('myText01').value += 6*1}
+else{
+document.getElementById('myText03').value += 6*1
+}
+}">
+<br>
+<input type=button value="7" id="myNumb7" onClick="{
+if(document.getElementById('myText02').value == ''){
+document.getElementById('myText01').value += 7*1}
+else{
+document.getElementById('myText03').value += 7*1
+}
+}">
+<input type=button value="8" id="myNumb8" onClick="{
+if(document.getElementById('myText02').value == ''){
+document.getElementById('myText01').value += 8*1}
+else{
+document.getElementById('myText03').value += 8*1
+}
+}">
+<input type=button value="9" id="myNumb9" onClick="{
+if(document.getElementById('myText02').value == ''){
+document.getElementById('myText01').value += 9*1}
+else{
+document.getElementById('myText03').value += 9*1
+}
+}">
+<br>
+<input type=button value="0" id="myNumb0" onClick="{
+if(document.getElementById('myText02').value == ''){
+document.getElementById('myText01').value += 0*1}
+else{
+document.getElementById('myText03').value += 0*1
+}
+}">
+<input type=button value="+" id="myPlus" onClick="{
+document.getElementById('myText02').value = '+'
+}">
+<input type=button value="-" id="mySub" onClick="{
+document.getElementById('myText02').value = '-'
+}">
+<br>
+<input type=button value="X" id="myMulti" onClick="{
+document.getElementById('myText02').value = 'X'
+}">
+<input type=button value="÷" id="myDivide" onClick="{
+document.getElementById('myText02').value = '÷'
+}">
+<input type=button value="^" id="myPower" onClick="{
+document.getElementById('myText02').value = '^'
+}">
+<br>
+<input type=button value="Sq" id="mySquare" onClick="{
+document.getElementById('myText02').value = 'Sq'
+}">
+<input type=button value="." id="myDecimal" onClick="{
+if(document.getElementById('myText02').value == ''){
+document.getElementById('myText01').value += '.'}
+else{
+document.getElementById('myText03').value += '.'
+}
+}"
+<br>
+<input type=button value=" = " onClick="{  
+   myNum1 = parseFloat(document.getElementById('myText01').value)
+   mySign = document.getElementById('myText02').value
+   myNum2 = parseFloat(document.getElementById('myText03').value)
+   document.getElementById('myDiv01').innerHTML += myNum1 + ' ' + mySign + ' ' + myNum2 + ' ' + '=' + ' '
+   if(mySign == '+'){
+   
+       document.getElementById('myDiv01').innerHTML +=  myNum1 + myNum2 + '<br>'
+   }
+
+   if(mySign == '-'){
+       document.getElementById('myDiv01').innerHTML +=  myNum1 - myNum2 + '<br>'
+   }
+   
+   if(mySign == 'X'){
+       document.getElementById('myDiv01').innerHTML +=  myNum1 * myNum2 + '<br>'
+   }
+
+   if(mySign == '÷'){
+       document.getElementById('myDiv01').innerHTML +=  myNum1 / myNum2 + '<br>'
+   }
+   
+   if(mySign == '^'){
+       document.getElementById('myDiv01').innerHTML +=  Math.pow(myNum1, myNum2) + '<br>'
+   }
+   
+   if(mySign == 'Sq') {
+         document.getElementById('myDiv01').innerHTML += Math.sqrt(myNum1) + '<br>'
+	}	
+}" >
+<br>
+<input type=button value="Clear Output" onClick="{  
+      document.getElementById('myDiv01').innerHTML =  '' 
+}" >
+<br>
+<input type="button" value="C" onClick="{
+document.getElementById('myText01').value = ''
+document.getElementById('myText02').value = ''
+document.getElementById('myText03').value= ''
+}">
+
+
+<br> <br> <br>
+<div id="myDiv01">....<br></div>

@@ -1,0 +1,291 @@
+
+<body onkeydown="{
+       document.getElementById('myDiv01')
+.innerHTML =  
+                String.fromCharCode(event.keyCode) + ' is your favorite key?'
+  }">
+
+<h2 align=center>T1a14-events-Ben</h1>
+<ol>
+
+<li> type a key
+
+<li><input type=button value="Click me" onclick="{
+
+    
+    document.getElementById('myDiv01')
+.innerHTML =  'Don\'t do everything the internet tells you to'
+  
+}">
+
+<div id="myDiv01">...</div>
+
+
+
+<html>
+<head>
+<script>
+function preferedStudent() {
+    prefer = document.forms[0].student.value;
+    alert("Your favorite student is " + prefer + ", really?");
+}
+</script>
+</head>
+
+<body>
+
+<form>
+<li>Favorite Student:
+<select id="student" onchange="preferedStudent()">
+<option value="Vansh">Vansh</option>
+<option value="Logan">Logan</option>
+<option value="Ben">Ben</option>
+</select>
+</form>
+
+</body>
+</html>
+
+
+
+<html>
+<head>
+<script>
+function confirmInput() {
+    fsubmit = document.forms[0].fsubmit.value;
+    alert("Hello " + fsubmit + "! Welcome to hell");
+}
+</script>
+</head>
+<body>
+<form onsubmit="confirmInput()" action="http://www.scientology.org/">
+<li>I really wouldn't press this one: <input id="fsubmit" type="text" value="Seriously Don't" size="20">
+<input type="submit">
+</form>
+</body>
+</html>
+
+
+
+
+<html>
+<head>
+<script>
+function message() {
+    alert("Yeah that was a pretty stupid thing to write, i'd reset aswell");
+}
+</script>
+</head>
+<body>
+
+<form onreset="message()">
+<li>This gives an alert on reset: <input type="text" size="20">
+<input type="reset">
+</form>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myCapital() {
+    var x = document.getElementById("fname3");
+    x.value = x.value.toUpperCase();
+}
+</script>
+</head>
+<body>
+
+<li>Changes to capitals on exit: <input type="text" id="fname3" onchange="myCapital()">
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function mySelect() {
+    document.getElementById("demoz").innerHTML = "Didn't I say not to listen to the internet";
+}
+</script>
+</head>
+<body>
+
+<li>Select the text: <input type="text" value="Select me" onselect="mySelect()">
+
+<p id="demoz"></p>
+
+</body>
+</html>
+
+
+
+
+
+<html>
+<body>
+
+<li><h1 onmouseover="style.color='Gold'" onmouseout="style.color='black'">Do you have the Midas touch?</h1>
+
+</body>
+</html>
+
+
+
+
+<html>
+<head>
+<script>
+function myFunctionC(elmnt, clr) {
+    elmnt.style.color = clr;
+}
+</script>
+</head>
+<body>
+
+<li><p onmousedown="myFunctionC(this,'red')" onmouseup="myFunctionC(this,'green')">
+Click this for Christmas.
+</p>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction(e) {
+    x = e.clientX;
+    y = e.clientY;
+    coor = "Coordinates: (" + x + "," + y + ")";
+    document.getElementById("demo5").innerHTML = coor
+}
+
+function clearCoor() {
+    document.getElementById("demo5").innerHTML = "";
+}
+</script>
+</head>
+<body style="margin:0px;">
+
+<li><p>Here's a cool one, mouse over the rectangle to get your mouse coordinates</p>
+
+<div id="coordiv" style="width:199px;height:99px;border:1px solid" onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+
+<p id="demo5"></p>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myDblick() {
+    document.getElementById("DC").innerHTML = "Join Scientology today";
+}
+</script>
+</head>
+<body>
+
+<li><p ondblclick="myDblick()">Doubleclick this for an important message</p>
+
+<p id="DC"></p>
+
+</body>
+</html>
+
+
+
+
+<html>
+<head>
+<script>
+function myResize() {
+    var w = window.outerWidth;
+    var h = window.outerHeight;
+    var txt = "Window size: width=" + w + ", height=" + h;
+    document.getElementById("demo8").innerHTML = txt;
+}
+</script>
+</head>
+
+<body onresize="myResize()">
+
+<li><p>Try changing the browser window size </p>
+
+<p id="demo8"> </p>
+
+</body>
+
+</html>
+
+
+
+
+
+
+<html>
+<head>
+<script>
+function bigImg(x) {
+    x.style.height = "128px";
+    x.style.width = "128px";
+}
+
+function normalImg(x) {
+    x.style.height = "64px";
+    x.style.width = "64px";
+}
+</script>
+</head>
+<body>
+<li><p> Mouse over old Betty Whites dab </p>
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="https://img.buzzfeed.com/buzzfeed-static/static/2016-02/7/18/enhanced/webdr15/anigif_enhanced-13591-1454888099-2.gif" alt="DabbyWhite" width="32" height="32">
+
+
+</body>
+</html>
+
+
+
+
+
+<html>
+<head>
+<script>
+function myLoad() {
+    alert("Page is loaded");
+}
+</script>
+</head>
+
+<body onload="myLoad()">
+<li><h2>I am locked and have loaded</h2>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
