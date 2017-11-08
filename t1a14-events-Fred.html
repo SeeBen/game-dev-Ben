@@ -288,4 +288,41 @@ function myLoad() {
 
 
 
+<html>
+<head>
+<script>
+function myUnload() {
+    alert("We unload boys");
+}
+</script>
+</head>
 
+<body onunload="myUnload()">
+<li>Close this window or press F5 to reload the page.
+
+</body>
+</html>
+
+
+
+
+
+<html>
+<head>
+<script>
+function coordinates(event) {
+    document.getElementById("demcord").innerHTML =
+    "X = " + event.screenX + "<br>Y = " + event.screenY;
+}
+</script>
+</head>
+<body>
+<li>
+<p onmousedown="coordinates(event)">
+Click to display the x and y coordinates of the cursor
+</p>
+
+<p id="demcord"></p>
+
+</body>
+</html>
