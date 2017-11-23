@@ -1,0 +1,87 @@
+<body onkeydown="{
+if(String.fromCharCode(event.keyCode)=='D'){
+document.getElementById('myA').style.left=parseInt(document.getElementById('myA').style.left)+20+'px'
+}
+if(String.fromCharCode(event.keyCode)=='S'){
+document.getElementById('myA').style.top=parseInt(document.getElementById('myA').style.top)+20+'px'
+}
+if(String.fromCharCode(event.keyCode)=='W'){
+document.getElementById('myA').style.top=parseInt(document.getElementById('myA').style.top)-20+'px'
+}
+if(String.fromCharCode(event.keyCode)=='A'){
+document.getElementById('myA').style.left=parseInt(document.getElementById('myA').style.left)-20+'px'
+}
+document.getElementById('myOut01').innerHTML = document.getElementById('myA').style.left + ' ,  '+ document.getElementById('myB').style.left
+
+if (myCollide('myA', 'myB')  == true) {
+   document.getElementById('myOut01').innerHTML =  'I\'ve been modernised!'
+   document.getElementById('myB').src='http://i.dailymail.co.uk/i/pix/2015/12/10/17/2F3F96C000000578-3354640-image-a-20_1449767508686.jpg'
+   document.getElementById('myA').src='http://mrwgifs.com/wp-content/uploads/2014/11/HQ-Carlton-Dance-With-a-Transparent-Background-Gif-From-The-Fresh-Prince-Of-Bel-Air.gif'
+}
+
+if (myCollide('myA', 'myC')  == true) {
+document.getElementById('myOut01').innerHTML =  'Hittin the dabbery doo is what I like to do'
+document.getElementById('myC').src='https://pbs.twimg.com/media/CNralleWUAAdzwX.jpg'
+document.getElementById('myA').src='https://i.imgur.com/iYjFs9i.gif'
+
+}
+
+if (myCollide('myA', 'myD')  == true) {
+document.getElementById('myOut01').innerHTML =  'Woof Woof vape naysh Woof Woof'
+document.getElementById('myD').src='https://i.imgur.com/RzIPZRj.jpg'
+document.getElementById('myA').src='http://www.gif-king.com/files/uSers/gif-king-81ce5e3d07153d8dddf3f06ef09c3543.gif'
+
+}
+
+if (myCollide('myA', 'myE')  == true) {
+document.getElementById('myOut01').innerHTML =  'I don\'t like this thing'
+document.getElementById('myE').src='https://upload.wikimedia.org/wikipedia/en/8/80/Snuffy31.jpg'
+document.getElementById('myA').src='https://vignette.wikia.nocookie.net/muppet/images/5/55/Snuffleupagus.png/revision/latest?cb=20110404163950'
+
+}
+
+if (myCollide('myA', 'myF')  == true) {
+
+document.getElementById('myF').src='https://thumb7.shutterstock.com/display_pic_with_logo/1158650/320357555/stock-photo-portrait-of-funny-handsome-nerd-guy-pulling-his-suspenders-i-am-so-handsome-320357555.jpg'
+document.getElementById('myG').src='http://i0.kym-cdn.com/entries/icons/mobile/000/014/879/SNAKE!.jpg'
+setTimeout(4000)
+
+
+}
+}">
+
+
+<script>
+
+function myCollide(my1, my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) && (bottom1 >=  top2   ) && (left1   <=  right2 ) && (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+</script>
+
+
+<img  id="myA"  src="https://orig00.deviantart.net/5645/f/2016/110/4/d/dabpuush_by_discopanda_tm-d9znmse.gif"  style="position:absolute; width:100px; height:100px; left:30px; top:10px">  
+ 
+<br><br><br><br>
+<img  id="myB"  src="https://vignette.wikia.nocookie.net/agk/images/2/2f/Old-lady.jpg/revision/latest?cb=20130914191537"  style="position:absolute; width:150px; height:150px; left:1000px; top:10px" >
+<img  id="myC"  src="https://memegenerator.net/img/images/600x600/1166079/angry-old-man.jpg"  style="position:absolute; width:150px; height:150px; left:30px; top:300px" >    
+<img  id="myD"  src="https://vetstreet.brightspotcdn.com/dims4/default/c2616f9/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F99%2F415260a80611e0a0d50050568d634f%2Ffile%2FSiberian-Husky-3-645mk062811.jpg"  style="position:absolute; width:200px; height:150px; left:1000px; top:600px" >    
+ <img  id="myE"  src="https://vignette2.wikia.nocookie.net/walkingwith/images/c/cc/CGTPL_WoollyMammoth.jpg/revision/latest?cb=20131225214753"  style="position:absolute; width:200px; height:150px; left:30px; top:750px" >    
+ <img  id="myF"  src="https://kurtbubna.com/wp-content/uploads/2014/11/Old-Hip-Young-Guy.jpg"  style="position:absolute; width:250px; height:200px; left:500px; top:400px" >
+ <img id="myG" src="http://www.cityrider.com/fixed/43aspect.png" style="position:absolute; width:1270px; height:920px; left:0px; top:0px" >
+ 
+<div id="myOut01">...</div>
+
+
+<div id="myOut02">...</div>

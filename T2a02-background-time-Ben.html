@@ -1,0 +1,24 @@
+<body id="myBody" style=" background-size: 5000px 1000px; background-image: url('http://cdns.yournewswire.com/wp-content/uploads/2015/06/jumbo-jet-wtc-twin-towers-911-634x381.jpg'); background-repeat :  repeat-x;  ">
+
+<input type=button value="Background Go" onclick="{
+       myX = 0
+       myY = 0
+       myCounter1 = setInterval(function(){   
+             myX += -4;
+             myY += 3;
+             document.getElementById('myBody').style.backgroundPosition = myX + 'px';
+
+      }, 30);    // every 30 milliseconds
+
+}">
+
+
+<input type=button value="Background Stop" onclick="{
+   clearInterval( myCounter1)
+   alert('Background stopped at position ' +document.getElementById('myBody').style.backgroundPosition)
+
+}">
+</body>
+
+<img  id="myF"  src="http://i0.kym-cdn.com/photos/images/original/001/045/698/3b6.gif"  style="position:absolute; width:250px; height:200px; left:500px; top:400px" >
+<img  id="myBody"  src="https://orig00.deviantart.net/1638/f/2015/353/e/e/haaaa_by_paulo60379-d9knyqe.png"  style="position:absolute; width:250px; height:200px; left:3500px; top:400px" >
