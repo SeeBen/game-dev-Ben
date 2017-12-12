@@ -1,0 +1,390 @@
+<script>
+
+function myCollide(my1, my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) && (bottom1 >=  top2   ) && (left1   <=  right2 ) && (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+</script>
+
+<body onkeydown="{
+if(String.fromCharCode(event.keyCode)=='S'){
+document.getElementById('myImage01').style.top=parseInt(document.getElementById('myImage01').style.top)+20+'px'
+}
+if(String.fromCharCode(event.keyCode)=='W'){
+document.getElementById('myImage01').style.top=parseInt(document.getElementById('myImage01').style.top)-20+'px'
+}
+}">
+
+<body id="myBody" style=" background-size: 5000px 1000px; background-image: url('https://i.pinimg.com/originals/cd/fd/a4/cdfda49dd7071ec1623e87f55943ab3e.gif'); background-repeat :  repeat-x;  ">
+
+<body onload="{
+ myX14 = 0
+       myY14 = 0
+       myCounter1 = setInterval(function(){   
+             myX14 += -8;
+             myY14 += 3;
+             document.getElementById('myBody').style.backgroundPosition = myX14 + 'px';
+
+      }, 30);    // every 30 milliseconds
+
+
+myX = 1200
+myCounter1 = setInterval(function(){
+myX += -08
+document.getElementById('myProj01').style.left= myX + 'px'
+
+
+		     if (myCollide('myProj01', 'myImage01')  == true) {
+                  document.getElementById('myProj01').style.left= '-100px'
+                 clearInterval(myCounter1)
+			    // alert('You got hit')
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+}, 30);
+
+
+
+myX = 1200
+myCounter1 = setInterval(function(){
+myX += -08
+document.getElementById('myProj02').style.left= myX + 'px'
+
+
+		     if (myCollide('myProj02', 'myImage01')  == true) {
+			 document.getElementById('myProj02').style.left= '-100px'
+                 clearInterval(myCounter1)
+			    // alert('You got hit')
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+myX = 1200
+myCounter1 = setInterval(function(){
+myX += -08
+document.getElementById('myProj03').style.left= myX + 'px'
+
+
+		     if (myCollide('myProj03', 'myImage01')  == true) {
+			 document.getElementById('myProj03').style.left= '-100px'
+                 clearInterval(myCounter1)
+			    // alert('You got hit')
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+
+myX2 = 2300
+myCounter1 = setInterval(function(){
+myX2 += -20
+document.getElementById('myProj04').style.left= myX2 + 'px'
+
+            if (myCollide('myProj04', 'myImage01')  == true) {
+			 document.getElementById('myProj04').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+
+myX3 = 3500
+myCounter1 = setInterval(function(){
+myX3 += -20
+document.getElementById('myProj05').style.left= myX3 + 'px'
+
+            if (myCollide('myProj05', 'myImage01')  == true) {
+			 document.getElementById('myProj05').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+myX4 = 4000
+myCounter1 = setInterval(function(){
+myX4 += -9
+document.getElementById('myProj06').style.left= myX4 + 'px'
+
+            if (myCollide('myProj06', 'myImage01')  == true) {
+			 document.getElementById('myProj06').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+
+myX4 = 4000
+myCounter1 = setInterval(function(){
+myX4 += -9
+document.getElementById('myProj07').style.left= myX4 + 'px'
+
+            if (myCollide('myProj07', 'myImage01')  == true) {
+			 document.getElementById('myProj07').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+
+myX5 = 4375
+myCounter1 = setInterval(function(){
+myX5 += -9
+document.getElementById('myProj08').style.left= myX5 + 'px'
+
+            if (myCollide('myProj08', 'myImage01')  == true) {
+			 document.getElementById('myProj08').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+myX5 = 4375
+myCounter1 = setInterval(function(){
+myX5 += -9
+document.getElementById('myProj09').style.left= myX5 + 'px'
+
+            if (myCollide('myProj09', 'myImage01')  == true) {
+			 document.getElementById('myProj08').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+
+myX6 = 4750
+myCounter1 = setInterval(function(){
+myX6 += -9
+document.getElementById('myProj10').style.left= myX6 + 'px'
+
+            if (myCollide('myProj10', 'myImage01')  == true) {
+			 document.getElementById('myProj10').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+myX6 = 4750
+myCounter1 = setInterval(function(){
+myX6 += -9
+document.getElementById('myProj11').style.left= myX6 + 'px'
+
+            if (myCollide('myProj11', 'myImage01')  == true) {
+			 document.getElementById('myProj11').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+myX7 = 5125
+myCounter1 = setInterval(function(){
+myX7 += -9
+document.getElementById('myProj12').style.left= myX7 + 'px'
+
+            if (myCollide('myProj12', 'myImage01')  == true) {
+			 document.getElementById('myProj12').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+myX7 = 5125
+myCounter1 = setInterval(function(){
+myX7 += -9
+document.getElementById('myProj13').style.left= myX7 + 'px'
+
+            if (myCollide('myProj13', 'myImage01')  == true) {
+			 document.getElementById('myProj13').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+
+myX8 = 5500
+myCounter1 = setInterval(function(){
+myX8 += -16
+document.getElementById('myProj14').style.left= myX8 + 'px'
+
+            if (myCollide('myProj14', 'myImage01')  == true) {
+			 document.getElementById('myProj14').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+
+myX9 = 6000
+myCounter1 = setInterval(function(){
+myX9 += -16
+document.getElementById('myProj15').style.left= myX9 + 'px'
+
+            if (myCollide('myProj15', 'myImage01')  == true) {
+			 document.getElementById('myProj15').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+myX10 = 6500
+myCounter1 = setInterval(function(){
+myX10 += -16
+document.getElementById('myProj16').style.left= myX10 + 'px'
+
+            if (myCollide('myProj16', 'myImage01')  == true) {
+			 document.getElementById('myProj16').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+
+myX11 = 7000
+myCounter1 = setInterval(function(){
+myX11 += -16
+document.getElementById('myProj17').style.left= myX11 + 'px'
+
+            if (myCollide('myProj17', 'myImage01')  == true) {
+			 document.getElementById('myProj17').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+
+myX12 = 8075
+myCounter1 = setInterval(function(){
+myX12 += -16
+document.getElementById('myProj18').style.left= myX12 + 'px'
+
+            if (myCollide('myProj18', 'myImage01')  == true) {
+			 document.getElementById('myProj18').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Victory-ben.html'
+   }
+
+
+}, 30);
+
+
+
+myX13 = 8000
+myCounter1 = setInterval(function(){
+myX13 += -16
+document.getElementById('myProj19').style.left= myX13 + 'px'
+
+            if (myCollide('myProj19', 'myImage01')  == true) {
+			 document.getElementById('myProj19').style.left= '-100px'
+                 clearInterval(myCounter1)
+					location = 'file:///H:/Documents/game-dev-2017-Ben/Final%20Project/T2a03-Final-Elevel-Defeat-ben.html'
+   }
+
+
+}, 30);
+
+
+
+
+}"
+
+
+</body>
+
+<img  id="myImage01"  src="https://i.imgur.com/6xGfEps.png?1"  style="position:absolute; width:225px; height:75px; left:0px; top:400px" >
+<img  id="myBadGuy"  src="https://i.imgur.com/hu58Wvf.png"  style="position:absolute; width:500px; height:400px; left:900px; top:300px" >
+<img id="myProj01" src="https://images-na.ssl-images-amazon.com/images/I/51IWL7y8ecL._SX258_BO1,204,203,200_.jpg" style="position:absolute; width:80px; height:100px; left:1200px; top:450px" >
+<img id="myProj02" src="https://img.clipartxtras.com/0ecf787cb7cc28cc0af8771959e444e2_dolphin-clipart-transparent-clipart-pie-cliparts-vectors-dolphin-clipart-transparent_1600-1067.png" style="position:absolute; width:80px; height:100px; left:1200px; top:800px" >
+<img id="myProj03" src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Music-PNG/Guitar_Transparent_Clipart.png?m=1434276589" style="position:absolute; width:80px; height:100px; left:1200px; top: 50px" >
+<img id="myProj04" src="https://i.imgur.com/wasdXnB.jpg" style="position:absolute; width:423px; height:500px; left:2300px; top:0px" >
+<img id="myProj05" src="https://i.imgur.com/wasdXnB.jpg" style="position:absolute;  width:423px; height:500px; left:3500px; top:500px" >
+<img id="myProj06" src="https://i.imgur.com/zOK4Gj1.png?1" style="position:absolute; width:375px; height:375px; left:4000px; top:650px" >
+<img id="myProj07" src="https://i.imgur.com/zOK4Gj1.png?1" style="position:absolute; width:375px; height:375px; left:4000px; top:0px" >
+<img id="myProj08" src="https://i.imgur.com/zOK4Gj1.png?1" style="position:absolute; width:375px; height:375px; left:4375px; top:-50px" >
+<img id="myProj09" src="https://i.imgur.com/zOK4Gj1.png?1" style="position:absolute; width:375px; height:375px; left:4375px; top:600px" >
+<img id="myProj10" src="https://i.imgur.com/zOK4Gj1.png?1" style="position:absolute; width:375px; height:375px; left:4750px; top:-100px" >
+<img id="myProj11" src="https://i.imgur.com/zOK4Gj1.png?1" style="position:absolute; width:375px; height:375px; left:4750px; top:550px" >
+<img id="myProj12" src="https://i.imgur.com/zOK4Gj1.png?1" style="position:absolute; width:375px; height:375px; left:5125px; top:-150px" >
+<img id="myProj13" src="https://i.imgur.com/zOK4Gj1.png?1" style="position:absolute; width:375px; height:375px; left:5125px; top:500px" >
+<img id="myProj14" src="https://i.imgur.com/8QlHmNw.png?1" style="position:absolute; width:375px; height:250px; left:5500px; top:100px" >
+<img id="myProj15" src="https://i.imgur.com/8QlHmNw.png?1" style="position:absolute; width:375px; height:250px; left:6000px; top:500px" >
+<img id="myProj16" src="https://i.imgur.com/8QlHmNw.png?1" style="position:absolute; width:375px; height:250px; left:6500px; top:100px" >
+<img id="myProj17" src="https://i.imgur.com/8QlHmNw.png?1" style="position:absolute; width:375px; height:250px; left:7000px; top:500px" >
+<img id="myProj18" src="https://i.imgur.com/Sc6t1g2.png?1" style="position:absolute; width:138px; height:200px; left:8075px; top:25px" >
+<img id="myProj19" src="https://i.imgur.com/27hVnpW.png?1" style="position:absolute; width:400px; height:600px; left:8000px; top:300px" >
+
+
+
+<iframe width="0" height="0" src="https://www.youtube.com/embed/VmzRXvLkS60?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
